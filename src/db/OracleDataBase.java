@@ -5,9 +5,8 @@
  */
 package db;
 
-import static com.sun.org.apache.xerces.internal.util.FeatureState.is;
 import java.util.ArrayList;
-import model.Alquiler;
+import model.Prestamo;
 import model.Carro;
 import model.Cliente;
 import model.cuenta.Cuenta;
@@ -20,8 +19,7 @@ public class OracleDataBase {
     private ArrayList<Carro> inventario;
     private ArrayList<Cuenta> cuentas;
     private ArrayList<Cliente> clientes;
-    private ArrayList<Alquiler> alquileres; 
-    
+    private ArrayList<Prestamo> alquileres; 
     private static OracleDataBase instance;
     
     private OracleDataBase(){
@@ -37,15 +35,20 @@ public class OracleDataBase {
         return instance;
     }
     
-    public void insertCliente(Cliente cliente){
+    public boolean insertCliente(Cliente cliente){
+        for(Cliente c: clientes){
+            if(cliente.getCedula() == c.getCedula())
+                return false;
+        }
         clientes.add(cliente);
+        return true;
     }
     
     public void insertCuenta(Cuenta c){
         cuentas.add(c);
     }
     
-    public void insertAlquiler(Alquiler a){
+    public void insertAlquiler(Prestamo a){
         alquileres.add(a);
     }
     
@@ -65,7 +68,7 @@ public class OracleDataBase {
         return clientes;
     }
 
-    public ArrayList<Alquiler> getAlquileres() {
+    public ArrayList<Prestamo> getAlquileres() {
         return alquileres;
     }
     

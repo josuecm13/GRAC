@@ -5,10 +5,15 @@
  */
 package controller;
 
+import model.cuenta.Cuenta;
+
 /**
  *
  * @author jd_cm
  */
 public class Login {
+    
+    private Cuenta cuenta;
+    
     
 }

@@ -5,6 +5,8 @@
  */
 package grac;
 
+import controller.MainMenuCajero;
+
 /**
  *
  * @author jd_cm
@@ -15,7 +17,7 @@ public class GRAC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MainMenuCajero menu = new MainMenuCajero();
     }
     
 }

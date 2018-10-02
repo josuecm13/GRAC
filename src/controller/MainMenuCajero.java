@@ -10,5 +10,15 @@ package controller;
  * @author jd_cm
  */
 public class MainMenuCajero {
+    view.MainMenuCajero view;
+    
+    public MainMenuCajero(){
+        view = new view.MainMenuCajero();
+        view.getBtnCreaCliente().addActionListener(e -> {
+            RegistraCliente rc = new RegistraCliente(view);
+            view.setVisible(false);
+        });
+        view.setVisible(true);
+    }
     
 }
