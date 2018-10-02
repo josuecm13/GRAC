@@ -9,6 +9,6 @@ package model.cuenta;
  *
  * @author jd_cm
  */
-public class Cajero {
+public class Cajero extends Cuenta{
     
 }

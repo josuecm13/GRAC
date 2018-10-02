@@ -9,6 +9,6 @@ package model.cuenta;
  *
  * @author jd_cm
  */
-public class Administrador {
+public class Administrador extends Cuenta{
     
 }
