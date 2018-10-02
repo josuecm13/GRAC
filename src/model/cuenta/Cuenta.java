@@ -10,24 +10,22 @@ package model.cuenta;
  * @author jd_cm
  */
 public class Cuenta {
-    private int id;
+    private String tipo;
     private String username;
     private String password;
-    
-    public Cuenta(){
-        
-    }
-    
-    public Cuenta(String username, String password){
-        
+
+    public Cuenta(String tipo, String username, String password) {
+        this.tipo = tipo;
+        this.username = username;
+        this.password = password;
     }
 
-    public int getId() {
-        return id;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTipo(String id) {
+        this.tipo = id;
     }
 
     public String getUsername() {

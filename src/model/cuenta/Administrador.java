@@ -10,5 +10,8 @@ package model.cuenta;
  * @author jd_cm
  */
 public class Administrador extends Cuenta{
+    public Administrador(String tipo, String username, String password) {
+        super(tipo, username, password);
+    }
     
 }

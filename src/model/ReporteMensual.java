@@ -3,16 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.cuenta;
+package model;
 
 /**
  *
- * @author jd_cm
+ * @author jose pablo
  */
-public class Cajero extends Cuenta{
-
-    public Cajero(String tipo, String username, String password) {
-        super(tipo, username, password);
-    }
+public class ReporteMensual {
+    
     
 }
