@@ -5,11 +5,30 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author jose pablo
  */
 public class ReporteMensual {
+    private int mes;
+    private int anno;
+    private ArrayList<Prestamo> prestamosRealizados;
+
+    public ReporteMensual(int mes, int anno) {
+        this.mes = mes;
+        this.anno = anno;
+        this.prestamosRealizados = new ArrayList<>();
+    }
+    
+    public void crearPrestamo(String usuario, String idCliente, int placa, Date fechaPrestamo){
+        
+    }
+
+    
+    
     
     
 }
