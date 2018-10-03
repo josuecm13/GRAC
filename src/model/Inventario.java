@@ -13,22 +13,22 @@ import model.Carro;
  * @author jose pablo
  */
 public class Inventario {
-    private ArrayList<Carro>  gajosDisponibles;
+    private ArrayList<Carro>  carrosDisponibles;
 
     public Inventario() {
     }
 
     
     public void reducirInventario(int placa){
-        for(Carro tmp: gajosDisponibles){
+        for(Carro tmp: carrosDisponibles){
             if(tmp.getPlaca() == placa){
-                gajosDisponibles.remove(tmp);
+                carrosDisponibles.remove(tmp);
             }
         }
     }
     
     public Carro verificarExistencia(String modelo){
-        for(Carro tmp: gajosDisponibles){
+        for(Carro tmp: carrosDisponibles){
             if(tmp.getModelo().compareTo(modelo) == 0){
                 return tmp;
             }
@@ -38,11 +38,15 @@ public class Inventario {
     
     
     public ArrayList<Carro> getGajosDisponibles() {
-        return gajosDisponibles;
+        return carrosDisponibles;
     }
 
     public void setGajosDisponibles(ArrayList<Carro> gajosDisponibles) {
-        this.gajosDisponibles = gajosDisponibles;
+        this.carrosDisponibles = gajosDisponibles;
+    }
+    
+    public void agregarCarro(Carro nuevo){
+        carrosDisponibles.add(nuevo);
     }
    
     

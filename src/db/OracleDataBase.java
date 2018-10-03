@@ -6,9 +6,12 @@
 package db;
 
 import java.util.ArrayList;
+import java.util.Date;
 import model.Prestamo;
 import model.Carro;
 import model.Cliente;
+import model.Inventario;
+import model.ReporteMensual;
 import model.cuenta.Cuenta;
 
 /**
@@ -16,14 +19,14 @@ import model.cuenta.Cuenta;
  * @author jd_cm
  */
 public class OracleDataBase {
-    private ArrayList<Carro> inventario;
+    private Inventario inventario;
     private ArrayList<Cuenta> cuentas;
     private ArrayList<Cliente> clientes;
-    private ArrayList<Prestamo> alquileres; 
+    private ReporteMensual reporteMensual; 
     private static OracleDataBase instance;
     
     private OracleDataBase(){
-        inventario = new ArrayList<>();
+        inventario = new Inventario();
         cuentas = new ArrayList<>();
         clientes = new ArrayList<>();
     }
@@ -48,15 +51,11 @@ public class OracleDataBase {
         cuentas.add(c);
     }
     
-    public void insertAlquiler(Prestamo a){
-        alquileres.add(a);
-    }
-    
     public void insertCarro(Carro c){
-        inventario.add(c);
+        inventario.agregarCarro(c);
     }
 
-    public ArrayList<Carro> getInventario() {
+    public Inventario getInventario() {
         return inventario;
     }
 
@@ -68,10 +67,25 @@ public class OracleDataBase {
         return clientes;
     }
 
-    public ArrayList<Prestamo> getAlquileres() {
-        return alquileres;
+    public ReporteMensual getReporteMensual() {
+        return reporteMensual;
+    }
+    
+    public Cliente buscarCliente(int cedula){
+        for(Cliente temp:clientes){
+            if(temp.getCedula() == cedula)
+                return temp;
+        }
+        return null;
+    }
+    
+    public void crearPrestamo( String nombreUsuario, int cedula, int placa, Date fechaPrestamo ){
+        reporteMensual.crearPrestamo(nombreUsuario, cedula, placa, fechaPrestamo);
     }
     
     
     
+    public Carro verificarExistenciaCarro(String modelo){
+        return inventario.verificarExistencia(modelo);
+    }
 }

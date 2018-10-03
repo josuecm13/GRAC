@@ -24,7 +24,7 @@ public class RegistraCliente {
     }
 
 
-    public RegistraCliente(MainMenuCajero view) {
+    public RegistraCliente(JFrame view) {
         this.prevScreen = view;
         innitComponents();
     }

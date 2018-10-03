@@ -5,6 +5,7 @@
  */
 package model;
 
+import db.OracleDataBase;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -23,12 +24,9 @@ public class ReporteMensual {
         this.prestamosRealizados = new ArrayList<>();
     }
     
-    public void crearPrestamo(String usuario, String idCliente, int placa, Date fechaPrestamo){
-        
+    public void crearPrestamo(String usuario, int idCliente, int placa, Date fechaPrestamo){
+        Prestamo nuevo = new Prestamo(usuario, idCliente, placa, fechaPrestamo);
+        prestamosRealizados.add( nuevo);
+        OracleDataBase.getInstance().getInventario().reducirInventario(placa);
     }
-
-    
-    
-    
-    
 }

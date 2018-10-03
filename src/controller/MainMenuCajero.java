@@ -18,6 +18,10 @@ public class MainMenuCajero {
             RegistraCliente rc = new RegistraCliente(view);
             view.setVisible(false);
         });
+        view.getBtnPrestamo().addActionListener(e -> {
+            RegistrarPrestamo rc = new RegistrarPrestamo(view);
+            view.setVisible(false);
+        });
         view.setVisible(true);
     }
     

@@ -9,12 +9,12 @@ package view;
  *
  * @author jose pablo
  */
-public class registrarPrestamo extends javax.swing.JFrame {
+public class RegistrarPrestamo extends javax.swing.JFrame {
 
     /**
      * Creates new form registrarPrestamo
      */
-    public registrarPrestamo() {
+    public RegistrarPrestamo() {
         initComponents();
     }
 
@@ -30,7 +30,7 @@ public class registrarPrestamo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         clienteID = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        modelo = new javax.swing.JTextField();
         alquilar = new javax.swing.JButton();
         verificarCliente = new javax.swing.JButton();
         verificarCarro = new javax.swing.JButton();
@@ -48,7 +48,7 @@ public class registrarPrestamo extends javax.swing.JFrame {
 
         jLabel2.setText("Modelo");
 
-        jTextField1.setText("modelo");
+        modelo.setText("modelo");
 
         alquilar.setText("Alquilar");
 
@@ -68,7 +68,7 @@ public class registrarPrestamo extends javax.swing.JFrame {
                             .addComponent(clienteID)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
+                            .addComponent(modelo, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(verificarCliente)
@@ -89,7 +89,7 @@ public class registrarPrestamo extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(verificarCarro))
                 .addGap(23, 23, 23)
                 .addComponent(alquilar)
@@ -120,20 +120,21 @@ public class registrarPrestamo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(registrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(registrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(registrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(registrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrarPrestamo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new registrarPrestamo().setVisible(true);
+                new RegistrarPrestamo().setVisible(true);
             }
         });
     }
@@ -143,7 +144,7 @@ public class registrarPrestamo extends javax.swing.JFrame {
     public javax.swing.JTextField clienteID;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField modelo;
     public javax.swing.JButton verificarCarro;
     public javax.swing.JButton verificarCliente;
     // End of variables declaration//GEN-END:variables
